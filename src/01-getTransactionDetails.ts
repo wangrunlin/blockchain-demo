@@ -1,6 +1,5 @@
 import { ethers } from "ethers";
-
-const provider = new ethers.JsonRpcProvider("https://rpc.sepolia.org/");
+import { provider } from ".";
 
 async function getTransactionDetails(transactionHash: string) {
   const transaction = await provider.getTransaction(transactionHash);
